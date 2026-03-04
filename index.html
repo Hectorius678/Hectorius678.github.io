@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body>
+<body class="lang-es">
     <div class="lang-switcher">
-        <a href="index.html" class="active">ES</a>
-        <a href="index_ca.html">CA</a>
-        <a href="index_en.html">EN</a>
+        <a href="#" onclick="setLanguage('es'); return false;" class="active" data-lang-btn="es">ES</a>
+        <a href="#" onclick="setLanguage('ca'); return false;" data-lang-btn="ca">CA</a>
+        <a href="#" onclick="setLanguage('en'); return false;" data-lang-btn="en">EN</a>
     </div>
     <div class="resume-container">
         <!-- Sidebar -->
@@ -25,10 +25,13 @@
                         alt="Héctor Lucas Jerez">
                 </div>
                 <h1>Héctor Lucas Jerez</h1>
-                <p class="profession">Sistemas y Ciberseguridad</p>
+                <p class="profession" data-lang="es">Sistemas y Ciberseguridad</p>
+                <p class="profession" data-lang="ca">Sistemes i Ciberseguretat</p>
+                <p class="profession" data-lang="en">Systems and Cybersecurity</p>
             </div>
 
-            <div class="sidebar-content">
+            <!-- Sidebar Content - ES -->
+            <div class="sidebar-content" data-lang="es">
                 <section class="sidebar-section">
                     <h2><i class="fas fa-address-card"></i> Contacto</h2>
                     <ul class="contact-list">
@@ -64,70 +67,304 @@
                     </div>
                 </section>
             </div>
+
+            <!-- Sidebar Content - CA -->
+            <div class="sidebar-content" data-lang="ca">
+                <section class="sidebar-section">
+                    <h2><i class="fas fa-address-card"></i> Contacte</h2>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-envelope"></i> hectorius678@gmail.com</li>
+                        <li><i class="fab fa-linkedin"></i> <a
+                                href="https://www.linkedin.com/in/hector-lucas-jerez-82211b3a6"
+                                target="_blank">LinkedIn</a></li>
+                        <li><i class="fab fa-github"></i> <a href="https://github.com/Hectorius678"
+                                target="_blank">GitHub</a></li>
+                    </ul>
+                </section>
+
+                <section class="sidebar-section">
+                    <h2><i class="fas fa-info-circle"></i> Informació</h2>
+                    <ul class="info-list">
+                        <li>Disponibilitat immediata</li>
+                    </ul>
+                </section>
+
+                <section class="sidebar-section">
+                    <h2><i class="fas fa-globe"></i> Idiomes</h2>
+                    <div class="language-item">
+                        <span class="lang-name">Castellà</span>
+                        <span class="lang-level">Natiu</span>
+                    </div>
+                    <div class="language-item">
+                        <span class="lang-name">Català</span>
+                        <span class="lang-level">Natiu</span>
+                    </div>
+                    <div class="language-item">
+                        <span class="lang-name">Anglès</span>
+                        <span class="lang-level">Bàsic</span>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar Content - EN -->
+            <div class="sidebar-content" data-lang="en">
+                <section class="sidebar-section">
+                    <h2><i class="fas fa-address-card"></i> Contact</h2>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-envelope"></i> hectorius678@gmail.com</li>
+                        <li><i class="fab fa-linkedin"></i> <a
+                                href="https://www.linkedin.com/in/hector-lucas-jerez-82211b3a6"
+                                target="_blank">LinkedIn</a></li>
+                        <li><i class="fab fa-github"></i> <a href="https://github.com/Hectorius678"
+                                target="_blank">GitHub</a></li>
+                    </ul>
+                </section>
+
+                <section class="sidebar-section">
+                    <h2><i class="fas fa-info-circle"></i> Information</h2>
+                    <ul class="info-list">
+                        <li>Immediate availability</li>
+                    </ul>
+                </section>
+
+                <section class="sidebar-section">
+                    <h2><i class="fas fa-globe"></i> Languages</h2>
+                    <div class="language-item">
+                        <span class="lang-name">Spanish</span>
+                        <span class="lang-level">Native</span>
+                    </div>
+                    <div class="language-item">
+                        <span class="lang-name">Catalan</span>
+                        <span class="lang-level">Native</span>
+                    </div>
+                    <div class="language-item">
+                        <span class="lang-name">English</span>
+                        <span class="lang-level">Basic</span>
+                    </div>
+                </section>
+            </div>
         </aside>
 
         <!-- Main Content -->
         <main class="main-content">
-            <section class="content-section">
-                <h2 class="section-title"><i class="fas fa-user"></i> Perfil Profesional</h2>
-                <p class="summary-text">
-                    Soy una persona con una personalidad equilibrada y habilidades destacadas en liderazgo, empatía y
-                    organización. Me caracterizo por trabajar de forma colaborativa, comprender las necesidades de los
-                    demás y mantener una estructura eficiente en cualquier entorno. Mi enfoque se basa en crear un
-                    ambiente de trabajo positivo, ordenado y orientado a resultados.
-                </p>
-            </section>
 
-            <section class="content-section">
-                <h2 class="section-title"><i class="fas fa-briefcase"></i> Experiencia Laboral</h2>
-                <div class="experience-item">
-                    <div class="item-header">
-                        <h3>Informático (Prácticas)</h3>
-                        <span class="date-badge">Dic 2024 – Abr 2025</span>
+            <!-- Main Content - ES -->
+            <div data-lang="es">
+                <section class="content-section">
+                    <h2 class="section-title"><i class="fas fa-user"></i> Perfil Profesional</h2>
+                    <p class="summary-text">
+                        Soy una persona con una personalidad equilibrada y habilidades destacadas en liderazgo, empatía
+                        y
+                        organización. Me caracterizo por trabajar de forma colaborativa, comprender las necesidades de
+                        los
+                        demás y mantener una estructura eficiente en cualquier entorno. Mi enfoque se basa en crear un
+                        ambiente de trabajo positivo, ordenado y orientado a resultados.
+                    </p>
+                </section>
+
+                <section class="content-section">
+                    <h2 class="section-title"><i class="fas fa-briefcase"></i> Experiencia Laboral</h2>
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <h3>Informático (Prácticas)</h3>
+                            <span class="date-badge">Dic 2024 – Abr 2025</span>
+                        </div>
+                        <h4 class="company-name">Netland</h4>
+                        <ul class="task-list">
+                            <li>Mantenimiento de equipos informáticos.</li>
+                            <li>Instalación y configuración de sistemas operativos.</li>
+                            <li>Resolución de incidencias técnicas.</li>
+                            <li>Revisión de cableado y redes.</li>
+                            <li>Soporte básico a usuarios.</li>
+                        </ul>
                     </div>
-                    <h4 class="company-name">Netland</h4>
-                    <ul class="task-list">
-                        <li>Mantenimiento de equipos informáticos.</li>
-                        <li>Instalación y configuración de sistemas operativos.</li>
-                        <li>Resolución de incidencias técnicas.</li>
-                        <li>Revisión de cableado y redes.</li>
-                        <li>Soporte básico a usuarios.</li>
+                </section>
+
+                <section class="content-section">
+                    <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Formación Académica</h2>
+
+                    <div class="education-item">
+                        <div class="item-header">
+                            <h3>CFGS en Administración de Sistemas Informáticos en Red (ASIR)</h3>
+                            <span class="date-badge ongoing">En curso</span>
+                        </div>
+                        <p class="institution">Salesians de Sarrià, Barcelona</p>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="item-header">
+                            <h3>CFGM en Sistemas Microinformáticos y Redes (SMR)</h3>
+                            <span class="date-badge">2024 – 2025</span>
+                        </div>
+                        <p class="institution">Salesians de Sarrià, Barcelona</p>
+                        <p class="grade">Nota final: <strong>7,9</strong></p>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <h2 class="section-title"><i class="fas fa-certificate"></i> Certificaciones y Otros</h2>
+                    <ul class="certification-list">
+                        <li><i class="fas fa-shield-alt"></i> Ethical Hacking</li>
+                        <li><i class="fas fa-shield-alt"></i> Fortinet Certified Fundamentals in Cybersecurity</li>
+                        <li><i class="fas fa-cloud"></i> Cloud Computing</li>
+                        <li><i class="fas fa-laptop-house"></i> Protege tu Negocio: Ciberseguridad en el Teletrabajo
+                        </li>
                     </ul>
-                </div>
-            </section>
+                </section>
+            </div>
 
-            <section class="content-section">
-                <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Formación Académica</h2>
+            <!-- Main Content - CA -->
+            <div data-lang="ca">
+                <section class="content-section">
+                    <h2 class="section-title"><i class="fas fa-user"></i> Perfil Professional</h2>
+                    <p class="summary-text">
+                        Soc una persona amb una personalitat equilibrada i habilitats destacades en lideratge, empatia i
+                        organització. Em caracteritzo per treballar de manera col·laborativa, comprendre les necessitats
+                        dels altres i mantenir una estructura eficient en qualsevol entorn. El meu enfocament es basa a
+                        crear un ambient de treball positiu, ordenat i orientat a resultats.
+                    </p>
+                </section>
 
-                <div class="education-item">
-                    <div class="item-header">
-                        <h3>CFGS en Administración de Sistemas Informáticos en Red (ASIR)</h3>
-                        <span class="date-badge ongoing">En curso</span>
+                <section class="content-section">
+                    <h2 class="section-title"><i class="fas fa-briefcase"></i> Experiència Laboral</h2>
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <h3>Informàtic (Pràctiques)</h3>
+                            <span class="date-badge">Des 2024 – Abr 2025</span>
+                        </div>
+                        <h4 class="company-name">Netland</h4>
+                        <ul class="task-list">
+                            <li>Manteniment d'equips informàtics.</li>
+                            <li>Instal·lació i configuració de sistemes operatius.</li>
+                            <li>Resolució d'incidències tècniques.</li>
+                            <li>Revisió de cablejat i xarxes.</li>
+                            <li>Suport bàsic a usuaris.</li>
+                        </ul>
                     </div>
-                    <p class="institution">Salesians de Sarrià, Barcelona</p>
-                </div>
+                </section>
 
-                <div class="education-item">
-                    <div class="item-header">
-                        <h3>CFGM en Sistemas Microinformáticos y Redes (SMR)</h3>
-                        <span class="date-badge">2024 – 2025</span>
+                <section class="content-section">
+                    <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Formació Acadèmica</h2>
+
+                    <div class="education-item">
+                        <div class="item-header">
+                            <h3>CFGS en Administració de Sistemes Informàtics en Xarxa (ASIX)</h3>
+                            <span class="date-badge ongoing">En curs</span>
+                        </div>
+                        <p class="institution">Salesians de Sarrià, Barcelona</p>
                     </div>
-                    <p class="institution">Salesians de Sarrià, Barcelona</p>
-                    <p class="grade">Nota final: <strong>7,9</strong></p>
-                </div>
-            </section>
 
-            <section class="content-section">
-                <h2 class="section-title"><i class="fas fa-certificate"></i> Certificaciones y Otros</h2>
-                <ul class="certification-list">
-                    <li><i class="fas fa-shield-alt"></i> Ethical Hacking</li>
-                    <li><i class="fas fa-shield-alt"></i> Fortinet Certified Fundamentals in Cybersecurity</li>
-                    <li><i class="fas fa-cloud"></i> Cloud Computing</li>
-                    <li><i class="fas fa-laptop-house"></i> Protege tu Negocio: Ciberseguridad en el Teletrabajo</li>
-                </ul>
-            </section>
+                    <div class="education-item">
+                        <div class="item-header">
+                            <h3>CFGM en Sistemes Microinformàtics i Xarxes (SMX)</h3>
+                            <span class="date-badge">2024 – 2025</span>
+                        </div>
+                        <p class="institution">Salesians de Sarrià, Barcelona</p>
+                        <p class="grade">Nota final: <strong>7,9</strong></p>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <h2 class="section-title"><i class="fas fa-certificate"></i> Certificacions i Altres</h2>
+                    <ul class="certification-list">
+                        <li><i class="fas fa-shield-alt"></i> Ethical Hacking</li>
+                        <li><i class="fas fa-shield-alt"></i> Fortinet Certified Fundamentals in Cybersecurity</li>
+                        <li><i class="fas fa-cloud"></i> Cloud Computing</li>
+                        <li><i class="fas fa-laptop-house"></i> Protegeix el teu Negoci: Ciberseguretat en el
+                            Teletreball</li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- Main Content - EN -->
+            <div data-lang="en">
+                <section class="content-section">
+                    <h2 class="section-title"><i class="fas fa-user"></i> Professional Profile</h2>
+                    <p class="summary-text">
+                        I am a well-balanced person with strong skills in leadership, empathy, and organization. I am
+                        known for working collaboratively, understanding others' needs, and maintaining an efficient
+                        structure in any environment. My approach is based on creating a positive, organized, and
+                        results-oriented work environment.
+                    </p>
+                </section>
+
+                <section class="content-section">
+                    <h2 class="section-title"><i class="fas fa-briefcase"></i> Work Experience</h2>
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <h3>IT Technician (Internship)</h3>
+                            <span class="date-badge">Dec 2024 – Apr 2025</span>
+                        </div>
+                        <h4 class="company-name">Netland</h4>
+                        <ul class="task-list">
+                            <li>Maintenance of computer equipment.</li>
+                            <li>Installation and configuration of operating systems.</li>
+                            <li>Resolution of technical issues.</li>
+                            <li>Review of wiring and networks.</li>
+                            <li>Basic user support.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+
+                    <div class="education-item">
+                        <div class="item-header">
+                            <h3>Higher Degree in Network Computer Systems Administration (ASIR)</h3>
+                            <span class="date-badge ongoing">In progress</span>
+                        </div>
+                        <p class="institution">Salesians de Sarrià, Barcelona</p>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="item-header">
+                            <h3>Medium Degree in Microcomputer Systems and Networks (SMR)</h3>
+                            <span class="date-badge">2024 – 2025</span>
+                        </div>
+                        <p class="institution">Salesians de Sarrià, Barcelona</p>
+                        <p class="grade">Final grade: <strong>7.9</strong></p>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <h2 class="section-title"><i class="fas fa-certificate"></i> Certifications and Others</h2>
+                    <ul class="certification-list">
+                        <li><i class="fas fa-shield-alt"></i> Ethical Hacking</li>
+                        <li><i class="fas fa-shield-alt"></i> Fortinet Certified Fundamentals in Cybersecurity</li>
+                        <li><i class="fas fa-cloud"></i> Cloud Computing</li>
+                        <li><i class="fas fa-laptop-house"></i> Protect your Business: Cybersecurity in Teleworking</li>
+                    </ul>
+                </section>
+            </div>
+
         </main>
     </div>
+
+    <script>
+        function setLanguage(lang) {
+            // Update classes on body
+            document.body.className = 'lang-' + lang;
+            document.documentElement.lang = lang;
+
+            // Update active state of language buttons
+            document.querySelectorAll('.lang-switcher a').forEach(a => {
+                if (a.getAttribute('data-lang-btn') === lang) {
+                    a.classList.add('active');
+                } else {
+                    a.classList.remove('active');
+                }
+            });
+
+            // Update title
+            const titles = {
+                'es': 'Curriculum Vitae | Héctor Lucas Jerez',
+                'ca': 'Currículum Vitae | Héctor Lucas Jerez',
+                'en': 'Curriculum Vitae | Héctor Lucas Jerez'
+            };
+            document.title = titles[lang] || titles['es'];
+        }
+    </script>
 </body>
 
 </html>

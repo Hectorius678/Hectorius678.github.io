@@ -356,6 +356,19 @@ body {
     color: #fff;
 }
 
+/* Language Visibility Rules */
+body:not(.lang-es) [data-lang="es"] {
+    display: none !important;
+}
+
+body:not(.lang-ca) [data-lang="ca"] {
+    display: none !important;
+}
+
+body:not(.lang-en) [data-lang="en"] {
+    display: none !important;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .lang-switcher {
